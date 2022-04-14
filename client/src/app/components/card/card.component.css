@@ -1,0 +1,45 @@
+/* body {
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.clase-card {
+  /* width: 350px;
+  height: 380px; */
+  display: inline-block;
+  margin: 20px;
+}
+
+.mat-card-header {
+  width: auto;
+  background-color: rgb(201, 216, 182);
+  padding: 5px;
+  color: rgb(81, 94, 99);
+  display: inline-block;
+  justify-content: center;
+}
+
+
+
+.mat-card-content,
+.mat-card-actions {
+  color: rgb(81, 94, 99);
+}
+
+.mat-card-content p {
+  color: rgba(255, 255, 255, 0.466);
+  box-sizing: border-box;
+  padding: 2px;
+
+}
+
+.FotoPerfil {
+  height: auto;
+  width: 320px;
+  box-sizing: border-box;
+  padding: 15px;
+
+}

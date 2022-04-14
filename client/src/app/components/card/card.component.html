@@ -1,0 +1,11 @@
+<mat-card class="clase-card"  >
+  <mat-card-header class="HeaderCard">
+    <!--<div mat-card-avatar class="example-header-image"></div>-->
+    <mat-card-title>{{Contenido.Titulo}}</mat-card-title>
+    <img class="FotoPerfil" src="{{Contenido.Imagen}}"/>
+  </mat-card-header>  
+  <br>     
+  <mat-card-content>
+      <p *ngFor="let Descripcion of Contenido.Descripcion">{{Descripcion.Descripcion}}</p>     
+  </mat-card-content>
+</mat-card>
