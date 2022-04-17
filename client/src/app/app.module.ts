@@ -16,12 +16,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { AdministratorsPageComponent } from './pages/administrators-page/administrators-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     DevelopersPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    AdministratorsPageComponent
   ],
   imports: [
     BrowserModule,

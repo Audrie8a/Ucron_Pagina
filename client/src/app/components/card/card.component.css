@@ -11,6 +11,12 @@
   height: 380px; */
   display: inline-block;
   margin: 20px;
+  width: 330px;
+}
+
+.content {
+  margin-top: 2vh;
+  max-width: 100%;
 }
 
 .mat-card-header {
