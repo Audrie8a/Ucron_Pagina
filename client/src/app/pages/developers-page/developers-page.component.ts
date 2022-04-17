@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { map } from 'rxjs';
+import { DevelopersPageService } from 'src/app/services/developers-page.service';
 
 @Component({
   selector: 'app-developers-page',
@@ -39,9 +41,29 @@ export class DevelopersPageComponent implements OnInit {
   ]
 
 
-  constructor() { }
+  constructor(private devsService: DevelopersPageService) { }
 
   ngOnInit(): void {
+    this.devsService.getData_Devs().subscribe({
+      next: (data: any) => {
+        console.log(data);
+        this.LstContenido = data.values.map(function (dt: any) {
+          return {
+            Titulo: dt.type,
+            Imagen: dt.picture,
+            Descripcion: [
+              { Descripcion: "Nombre:  " + dt.name },
+              { Descripcion: "Carnet:  " + dt.carnet },
+              { Descripcion: "Curso:  " + dt.course }
+            ]
+          }
+        });
+
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    });
   }
 
 }

@@ -1,3 +1,7 @@
-<div class="ListaCards" *ngFor="let Contenido of LstContenido">
-  <app-card [Contenido]="Contenido"></app-card>
+<div class="container">
+    <div class="cardlist">
+        <div class="ListaCards" *ngFor="let Contenido of LstContenido">
+            <app-card [Contenido]="Contenido"></app-card>
+        </div>  
+    </div>
 </div>
