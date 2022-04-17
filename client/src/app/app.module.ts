@@ -9,11 +9,19 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { CardComponent } from './components/card/card.component';
 import { DevelopersPageComponent } from './pages/developers-page/developers-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatGridListModule } from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    DevelopersPageComponent
+    DevelopersPageComponent,
+    HomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +29,13 @@ import { DevelopersPageComponent } from './pages/developers-page/developers-page
     HttpClientModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule,
+    FontAwesomeModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

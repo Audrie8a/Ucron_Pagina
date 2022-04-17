@@ -1,1 +1,28 @@
-<router-outlet></router-outlet>
+<mat-toolbar style="background-color: #1A374D;">
+    <mat-toolbar-row>
+        <button mat-icon-button>
+            <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </button>
+        <h1>Ucron</h1>
+        <span class="menu-spacer"></span>
+        <div>
+            <a mat-button [routerLink]="'/Home'" routerLinkActive="active"> Home </a>
+            <a mat-button [routerLink]="'/Administrators'" routerLinkActive="active"> Administradores </a>
+            <a mat-button [routerLink]="'/Developers'" routerLinkActive="active"> Dessarrolladores </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav>
+        <mat-nav-list>
+            <a mat-list-item [routerLink]="'/Home'" routerLinkActive="active"> Home </a>
+            <a mat-list-item [routerLink]="'/Administrators'" routerLinkActive="active"> Administradores </a>
+            <a mat-list-item [routerLink]="'/Developers'" routerLinkActive="active"> Dessarrolladores </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div style="height: 91.5vh;">
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

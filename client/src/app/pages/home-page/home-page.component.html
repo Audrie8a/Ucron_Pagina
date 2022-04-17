@@ -1,0 +1,23 @@
+<mat-grid-list cols="6" rowHeight="100%">
+    <mat-grid-tile [colspan]="1"></mat-grid-tile>
+    <mat-grid-tile [colspan]="4">
+
+        <div class="carousel-container" *ngIf="images && images.length > 0">
+            <img class="fade" *ngFor="let image of images; let i = index" [src]="image.image" [alt]="image.id"
+                [ngClass]="{'image-active': selectedIndex === i}">
+            <div class="carousel-dot-container" *ngIf="indicators">
+                <span *ngFor="let dot of images; let i = index" class="dot" [ngClass]="{'active': selectedIndex === i}"
+                    (click)="selectImage(i)"></span>
+            </div>
+
+            <button class="btn-carousel btn-prev" *ngIf="controls" (click)="onPrevClick()">
+                <fa-icon [icon]="faArrowCircleLeft" class="icon-carousel icon-prev"></fa-icon>
+            </button>
+
+            <button class="btn-carousel btn-next" *ngIf="controls" (click)="onNextClick()">
+                <fa-icon [icon]="faArrowCircleRight" class="icon-carousel icon-next"></fa-icon>
+            </button>
+        </div>
+
+    </mat-grid-tile>
+</mat-grid-list>
